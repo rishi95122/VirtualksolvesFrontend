@@ -6,6 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const Comment = ({id,currentUser}) => {
     const [input, setInput] = useState();
     const [comments, setComments] = useState();
+    const [change,setChange]=useState(false)
     const addComment=async()=>{
         try{
         await axios.post(`http://localhost:8800/api/comment`, {
@@ -14,6 +15,7 @@ const Comment = ({id,currentUser}) => {
           content:input
         });
         toast.success("Comment Added")
+        setChange(!change)
       } catch (error) {
         console.log(error);
       }
@@ -30,7 +32,7 @@ const Comment = ({id,currentUser}) => {
             console.log(error);
           }}
           getComments()
-      },[])
+      },[change])
      
   return (
     <div className='commentscontainer'><h3>Comments</h3>

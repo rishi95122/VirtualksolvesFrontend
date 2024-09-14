@@ -26,7 +26,7 @@ const [data,setData]=useState([])
      
      {
       data ? data.map((item,idx)=>{
-         return  <Link  key={idx} to={item._id} >
+         return  <Link  key={idx} to={item._id} reloadDocument>
         <ClassCard 
          title={item?.title}
          description={item?.description}/>  </Link>

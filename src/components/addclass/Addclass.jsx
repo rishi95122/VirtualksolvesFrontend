@@ -1,18 +1,17 @@
-
-import  { useContext, useState } from 'react';
-import './addclass.css'; 
-import axios from 'axios';
-import { AuthContext } from '../../context/authContext';
-import {toast} from 'react-hot-toast'
-import { useNavigate } from 'react-router-dom';
+import { useContext, useState } from "react";
+import "./addclass.css";
+import axios from "axios";
+import { AuthContext } from "../../context/authContext";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const Addclass = () => {
   const [formData, setFormData] = useState({
-    title: '',
-    description: '',
+    title: "",
+    description: "",
   });
-  const nav=useNavigate()
-const {currentUser}=useContext(AuthContext)
-console.log(currentUser)
+  const nav = useNavigate();
+  const { currentUser } = useContext(AuthContext);
+  if (!currentUser) nav(0);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,21 +19,20 @@ console.log(currentUser)
       [name]: value,
     });
   };
-
-  const handleSubmit =async (e) => {
+  console.log(currentUser);
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-       await axios.post(`http://localhost:8800/api/class`,{
-        title:formData.title,
-        description:formData.description,
-        admin:currentUser._id
-      })
-      toast.success("Class Added")
-      nav("/")
+      await axios.post(`http://localhost:8800/api/class`, {
+        title: formData.title,
+        description: formData.description,
+        admin: currentUser._id,
+      });
+      toast.success("Class Added");
+      nav("/");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-    
   };
 
   return (
@@ -61,8 +59,10 @@ console.log(currentUser)
           required
         />
       </div>
-    
-      <button type="submit" className="submit-btn">Submit</button>
+
+      <button type="submit" className="submit-btn">
+        Submit
+      </button>
     </form>
   );
 };
