@@ -1,0 +1,154 @@
+
+.singlecard {
+ 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 30px auto;
+    width: 80%;
+ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background: #fff;
+  }
+  .enrollcon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  
+  .singlecardimage {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+  }
+  
+  .singlecardcontent {
+    padding: 1rem;
+  }
+  
+  .singlecardtitle {
+    font-size: 40px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .singlecarddescription {
+    margin-top: 10px;
+    color: #666;
+    font-size: larger
+  }
+  .classcontent{
+    padding: 0 1rem;
+  }
+  .singleunit{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 5px;
+    cursor: pointer;
+  }
+  .addbook{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .inneraddbook{
+    display: flex;
+    gap:10px;
+    input{
+      border-radius: 20px;
+      padding: 5px;
+     
+    }
+  }
+  .chapters{
+    background-color: #cccccc;
+    padding: 20px 5px;
+  }
+  .submitchapterbtn{
+    background-color: rgb(114, 114, 255);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .chaptercontent{
+    display: flex;
+    flex-direction: column;
+  }
+  .chaptercontainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap:5px;
+  }
+  .singlechapter{
+    padding: 20px 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .lecturescontainer{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 5px;
+    border-radius: 20px;
+  
+  }
+  .lec{
+    margin-top: 20px;
+    padding-left: -5px;
+  }
+  .youtubecontainer{
+    width: 100%;
+ margin-top: 20px;
+ border-radius: 20px;
+ overflow: hidden;
+  }
+  .nocontent{
+    font-size: xx-large;
+    font-weight: 600;
+    text-align: center;
+    padding: 50px 0px;
+    color: #9c9c9c;
+  }
+  .commentscontainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+   
+    width: 100%;
+   
+  }
+  .commentinput{
+    text-align: center;
+    display: flex;
+    gap:10px;
+    justify-content: end;
+    margin-top: 10px; 
+  
+  }
+  .cinput{
+    padding: 10px;
+    border-radius: 20px;
+
+  }
+  .viewcomment{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:10px
+  }
+  .realcomment{
+    font-weight: 200;
+
+  }
+  .singlecommentcontainer{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px 10px;
+  }
